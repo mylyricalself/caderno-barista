@@ -1,5 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 
+// Declaração para evitar erro do TypeScript no build
+declare const process: { env: { API_KEY: string } };
+
 // Inicializa a IA com a chave segura processada pelo Vite
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
@@ -31,7 +34,7 @@ export const enhanceRecipeNotes = async (currentNotes: string, method: string): 
       model: model,
       contents: prompt,
       config: {
-        thinkingConfig: { thinkingBudget: 0 } 
+        // Thinking budget removido para o modelo flash para evitar erros de compatibilidade
       }
     });
 
