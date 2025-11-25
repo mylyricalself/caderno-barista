@@ -1,0 +1,7 @@
+{
+  "name": "Caderno do Barista",
+  "description": "Um aplicativo elegante para baristas anotarem, organizarem e aprimorarem suas receitas de café com a ajuda da IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
